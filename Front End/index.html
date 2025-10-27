@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Architect</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Our Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1 class="main-title">Resume Architect</h1>
+        <p class="tagline">A Data Structure driven Resume Management and Customization platform that does more than just storing text.</p>
+        <h2 class="init-title" id="init-title">Build Your Organized Resume Now &raquo;</h2>
+    </header>
+
+
+    <!-- == 1. PERSONAL DETAILS SECTION              == -->
+
+    <fieldset>
+        <legend>1. Personal Details</legend>
+        <!-- Removed Load/Initialize button -->
+        <button id="pd-preview" class="secondary">Refresh Preview</button>
+
+        <div class="preview-area" id="pd-preview-area">
+             <p class="placeholder">Click the title above to load initial fields or refresh preview.</p>
+        </div>
+
+        <div class="controls-grid">
+             <div class="controls">
+                <strong>Add New Field:</strong>
+                <input type="text" id="pd-add-field" placeholder="Field">
+                <input type="text" id="pd-add-value" placeholder="Value">
+                <input type="number" id="pd-add-index" placeholder="Index">
+                <button id="pd-add-btn">Add Field</button>
+            </div>
+            <div class="controls">
+                <strong>Update Field by Index:</strong>
+                <input type="number" id="pd-upd-index" placeholder="Index (e.g., 0)">
+                <input type="text" id="pd-upd-value" placeholder="New Value">
+                <button id="pd-upd-btn" class="warning">Update Field</button>
+            </div>
+            <div class="controls">
+                <strong>Delete Field by Index:</strong>
+                <input type="number" id="pd-del-index" placeholder="Index (e.g., 1)">
+                <button id="pd-del-btn" class="danger">Delete Field</button>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <!-- == 2. EDUCATION SECTION                     == -->
+
+    <fieldset>
+        <legend>2. Education</legend>
+        <button id="edu-preview" class="secondary">Refresh Preview</button>
+        
+        <div class="preview-area" id="edu-preview-area">
+             <p class="placeholder">Add education details below.</p>
+        </div>
+
+        <div class="controls-grid">
+            <div class="controls">
+                <strong>Add Education:</strong>
+                <input type="text" id="edu-add-name" placeholder="School Name">
+                <input type="text" id="edu-add-course" placeholder="Course & Year">
+                <input type="text" id="edu-add-score" placeholder="Score/GPA">
+                <input type="number" id="edu-add-index" placeholder="Index">
+                <button id="edu-add-btn">Add Education</button>
+            </div>
+            <div class="controls">
+                <strong>Delete Education by Index:</strong>
+                <input type="number" id="edu-del-index" placeholder="Index (e.g., 0)">
+                <button id="edu-del-btn" class="danger">Delete Entry</button>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <!-- == 3. SKILLS SECTION                        == -->
+
+     <fieldset>
+        <legend>3. Skills (Queue)</legend>
+        <button id="skl-preview" class="secondary">Refresh Preview</button>
+        
+        <div class="preview-area" id="skl-preview-area">
+            <p class="placeholder">Add skills below.</p>
+        </div>
+
+        <div class="controls-grid">
+            <div class="controls">
+                <strong>Enqueue Skill:</strong>
+                <input type="text" id="skl-add-skill" placeholder="Skill Name (e.g., C++)">
+                <button id="skl-add-btn">Enqueue Skill</button>
+            </div>
+            <div class="controls">
+                <strong>Dequeue Skill by Index:</strong>
+                <input type="number" id="skl-del-index" placeholder="Index (e.g., 0 for oldest)">
+                <button id="skl-del-btn" class="danger">Dequeue Skill</button>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <!-- == 4. ACHIEVEMENTS SECTION                  == -->
+
+    <fieldset>
+        <legend>4. Achievements (Stack)</legend>
+        <button id="acv-preview" class="secondary">Refresh Preview</button>
+        
+        <div class="preview-area" id="acv-preview-area">
+            <p class="placeholder">Add achievements below.</p>
+        </div>
+
+        <div class="controls-grid">
+            <div class="controls">
+                <strong>Push Achievement:</strong>
+                <input type="text" id="acv-add-desc" placeholder="Description (e.g., Hackathon Winner)">
+                <button id="acv-add-btn">Push Achievement</button>
+            </div>
+            <div class="controls">
+                <strong>Pop Achievement by Index:</strong>
+                <input type="number" id="acv-del-index" placeholder="Index (e.g., 0 for newest)">
+                <button id="acv-del-btn" class="danger">Pop Achievement</button>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <!-- == 5. ADDITIONAL DETAILS SECTION            == -->
+
+    <fieldset>
+        <legend>5. Additional Details</legend>
+        <button id="add-preview" class="secondary">Refresh Preview</button>
+        
+        <div class="preview-area" id="add-preview-area">
+            <p class="placeholder">Add other details below.</p>
+        </div>
+
+        <div class="controls-grid">
+            <div class="controls">
+                <strong>Add Detail:</strong>
+                <input type="text" id="add-add-detail" placeholder="Detail (e.g., Fluent in Spanish)">
+                <input type="number" id="add-add-index" placeholder="Index">
+                <button id="add-add-btn">Add Detail</button>
+            </div>
+            <div class="controls">
+                <strong>Delete Detail by Index:</strong>
+                <input type="number" id="add-del-index" placeholder="Index">
+                <button id="add-del-btn" class="danger">Delete Detail</button>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <!-- == 6. JOB APPLICATION CYCLE SECTION         == -->
+
+    <fieldset>
+        <legend>6. Job Application Cycle</legend>
+        <button id="job-preview" class="secondary">Refresh Preview</button>
+        
+        <div class="preview-area" id="job-preview-area">
+            <p class="placeholder">Add job applications below.</p>
+        </div>
+
+        <div class="controls-grid-3">
+            <div class="controls">
+                <strong>Add Job:</strong>
+                <input type="text" id="job-add-company" placeholder="Company Name">
+                <input type="text" id="job-add-role" placeholder="Job Role">
+                <input type="text" id="job-add-status" placeholder="Status (e.g., Applied)">
+                <input type="number" id="job-add-index" placeholder="Index">
+                <button id="job-add-btn">Add Job</button>
+            </div>
+            <div class="controls">
+                <strong>Update Job Status by Index:</strong>
+                <input type="number" id="job-upd-index" placeholder="Index of job to update">
+                <input type="text" id="job-upd-status" placeholder="New Status">
+                <button id="job-upd-btn" class="warning">Update Status</button>
+            </div>
+            <div class="controls">
+                <strong>Delete Job by Index:</strong>
+                <input type="number" id="job-del-index" placeholder="Index">
+                <button id="job-del-btn" class="danger">Delete Job</button>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <script src="script.js"></script>
+</body>
+<footer class="main-footer">
+    Resume Architect | by DS-III-T101 for PROJECT BASED LEARNING (PBL) on Data Structures in C [Semester 3 : 2025]
+</footer>
+</html>
