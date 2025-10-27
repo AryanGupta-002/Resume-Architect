@@ -1,4 +1,4 @@
-These are the Forntend files that contain 
+These are the FrontEnd files that contain 
 
 1st. index.html
 
